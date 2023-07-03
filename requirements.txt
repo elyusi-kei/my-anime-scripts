@@ -1,0 +1,4 @@
+ffmpeg_python>=0.2.0
+prompt_toolkit>=3.0.38
+pysubs2>=1.6.1
+ripgrepy>=2.0.0
