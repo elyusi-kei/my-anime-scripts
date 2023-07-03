@@ -32,20 +32,21 @@ where the script is expected to be run in root of this structure (at the episode
 
 The expected structure on completion is:
 
-<pre><code>機動戦士ガンダム00 S1/
-├─ subs_orig/
-│  ├─ retime.toml
-│  ├─ sub001.srt
-│  ├─ sub002.srt
-│  ├─ ...
-<strong>├─ subs/
-│  ├─ S01 E01.ja.srt
-│  ├─ S01 E02.ja.srt
-│  ├─ ...</strong>
-├─ S01 E01.mkv
-├─ S01 E02.mkv
-├─ ...
-</pre></code>
+```diff
+ 機動戦士ガンダム00 S1/
+ ├─ subs_orig/
+ │  ├─ retime.toml
+ │  ├─ sub001.srt
+ │  ├─ sub002.srt
+ │  ├─ ...
++├─ subs/
++│  ├─ S01 E01.ja.srt
++│  ├─ S01 E02.ja.srt
++│  ├─ ...
+ ├─ S01 E01.mkv
+ ├─ S01 E02.mkv
+ ├─ ...
+```
 
 For mpv to find the subtitles in ``subs/``, something like
 
@@ -90,18 +91,11 @@ As for the choice of default directory: having my scripts folder live inside my 
 As a reminder, don't forget to alias judiciously. On Windows I have this in `profile.ps1` for `pwsh`:
 
 
-<pre language="powershell"><code language="powershell">function ..retime { python "<b>&lt;SNIP&gt;</b>/retime.py" @args }
-function ..search { python "<b>&lt;SNIP&gt;</b>/search.py" @args }
-</pre></code>
+    function ..retime { python "✂️/retime.py" @args }
+    function ..search { python "✂️/search.py" @args }
 
 `..` as a prefix in function names is legal and doesn't conflict with anything AFAIK, which allows for really generic naming. `,retime` and the like being valid *nix scripts is the  [inspiration](https://rhodesmill.org/brandon/2009/commands-with-comma/) here.
 </details>
 
 Feel free to message me:  
 ![](https://dcbadge.vercel.app/api/shield/170925540855775242?style=flat)
-
-
-<style type="text/css">
-strong {color:#FF8F40;}
-b {color:#ACB6BF8C}
-</style>
