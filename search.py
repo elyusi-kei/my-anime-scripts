@@ -140,7 +140,7 @@ def main(args):
     result_count_limit = os.get_terminal_size().lines - 1
     # since results can be omitted, randomly pick each time for some extra gamba 🎲🎲
     omitted_num = max(0, len(results) - result_count_limit)
-    results = random.choices(results, k=min(result_count_limit, len(results)))
+    results = random.sample(results, k=min(result_count_limit, len(results)))
     prompt_choices = []
 
     regex = re.compile(args.search_string)
